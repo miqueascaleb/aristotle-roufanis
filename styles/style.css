@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@300;400&family=Work+Sans:wght@300&display=swap");
+
+:root {
+  --background: #191919;
+  --artwork-back: rgb(48, 48, 48);
+  --header-font: #fff;
+  --up-arrow: rgba(98, 98, 98, 0.405);
+  --header-nav-font: rgb(142, 142, 142);
+  --nav-font-hover: rgb(181, 181, 181);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+.page-wrapper {
+  overflow-x: hidden;
+}
+
+.up-arrow .arrow-fixed {
+  position: fixed;
+  z-index: 9999;
+  color: var(--up-arrow);
+  font-size: 4.5rem;
+  cursor: pointer;
+  right: 0.5em;
+  bottom: 0.4em;
+}
+
+/* ----------------------------- HEADER -----------------------------*/
+
+.header-container {
+  width: 100vw;
+  background-color: var(--background);
+  padding: 10px;
+  height: 100px;
+}
+.header {
+  margin: 0.9rem 0em;
+  gap: 20rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-container .header .header-nav {
+  display: inherit;
+  gap: 0.9em;
+}
+.header-container .header .header-nav a {
+  font-size: 0.75em;
+  font-weight: 300;
+  gap: 1.1em;
+  text-decoration: none;
+  color: var(--header-nav-font);
+}
+.header-container .header .header-nav a:hover {
+  color: var(--nav-font-hover);
+  font-weight: 400;
+}
+
+.header-container .header .header-title h1 {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: 300;
+  color: var(--header-font);
+}
+.header-container .header .social {
+  display: inherit;
+  gap: 1em;
+}
+.header-container .header .social a {
+  color: var(--header-font);
+  font-size: 1.2em;
+}
+
+/* ----------------------------- MASTHEAD -----------------------------*/
+
+.masthead-container {
+  position: relative;
+  width: 100vw;
+  height: 87.4vh;
+  background: url("https://pro2-bar-s3-cdn-cf3.myportfolio.com/df986db9eae1a7fa58de20a9511e890a/e859be43-4473-4d20-bf31-1bfeab40a97f_rwc_261x373x1858x1394x1858.jpg?h=ab5ef598ecdfd901f64c23e6a30a068b")
+    no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.masthead-container .masthead-title {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  position: relative;
+  top: calc(50% - 7%);
+  left: calc(50% - 11.5rem);
+}
+.masthead-container .masthead-title h1 {
+  font-weight: 400;
+  color: var(--header-font);
+}
+.masthead-container .down-arrow a {
+  position: absolute;
+  bottom: 1rem;
+  left: calc(50% - 1.9rem);
+  color: var(--header-font);
+  font-size: 3.5em;
+}
+
+/* ----------------------------- ABOUT -----------------------------*/
+
+.about-container {
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-content {
+  padding: 0rem 4rem;
+  margin-bottom: 2rem;
+}
+.about-content p {
+  line-height: 1.6em;
+  letter-spacing: 0.05rem;
+  color: var(--nav-font-hover);
+  padding: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.about-content .text-by {
+  text-align: right;
+  font-size: 0.6em;
+}
+
+.about-title h2 {
+  color: var(--header-font);
+  margin-top: 2rem;
+  padding: 4rem;
+  font-weight: 800;
+}
+.about-pics {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 10em; */
+}
+.about-pics .about-img {
+  max-width: 99vw;
+  width: 100%;
+  padding: 6rem 4em 0.4em 4em;
+}
+.about-pics .img-container .img-info {
+  color: var(--header-font);
+  font-size: 0.8em;
+  text-align: center;
+}
+.more-projects p {
+  color: var(--header-font);
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: 0.1rem;
+}
+.more-projects {
+  background-color: var(--background);
+  padding: 8em 0em;
+}
+
+/* ----------------------------- ARTWORK -----------------------------*/
+
+.artwork-container {
+  background-color: var(--background);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.artworks {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.artwork-container .artwork-more {
+  padding: 2em 0.3em;
+  font-weight: 600;
+  font-size: 1em;
+  color: var(--header-font);
+  letter-spacing: 0.05em;
+}
+.artwork-container .artwork {
+  width: 31.2rem;
+  height: 33rem;
+  background-color: var(--artwork-back);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+}
+.artwork .artwork-title:hover {
+  background-color: var(--header-font);
+  color: #191919;
+}
+.artwork-container .artwork .artwork-cover {
+  background: url("/artwork/insolation.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 74%;
+  overflow: hidden;
+}
+.artwork-container .artwork .artwork-cover2 {
+  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/9ef0d236200905.57139cf035bc7.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 74%;
+  overflow: hidden;
+}
+.artwork-container .artwork .artwork-cover3 {
+  background: url("artwork/faith in physics.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 74%;
+  overflow: hidden;
+}
+.artwork-container .artwork .artwork-cover img {
+  width: 100%;
+  height: 100%;
+  object-position: center center;
+  object-fit: cover;
+}
+.artwork-title {
+  color: var(--header-font);
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35em;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+  transition: 0.5s;
+}
+.art-year {
+  color: var(--header-nav-font);
+  font-size: 0.85em;
+  letter-spacing: normal;
+}
+
+/* ----------------------------- FOOTER -----------------------------*/
+
+.footer {
+  padding: 9.5rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 2.5em;
+  background-color: var(--background);
+  width: 100vw;
+  height: 10rem;
+  color: var(--header-font);
+  font-size: 0.7em;
+  letter-spacing: 0.07em;
+  font-weight: 200;
+}
